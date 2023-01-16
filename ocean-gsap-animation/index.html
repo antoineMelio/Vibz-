@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- utile pour le responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- titre de la page -->
+    <title>Mon super titre</title>
+
+    <!-- lien vers le fichier de style CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- le contenu de votre site -->
+    <div class="outside">
+      <div id="sun"></div>
+
+      <img id="cloud" src="images/cloud.svg" />
+
+      <img id="island-behind" src="images/ile-derriere.svg" />
+
+      <img id="island-front" src="images/ile-devant.svg" />
+    </div>
+    <div class="sea">
+      <img id="reflect" src="images/reflet.svg" />
+      <img id="sea-bg-top" src="images/fond-mer-haut.svg" />
+      <img id="sea-bg-bottom" src="images/fond-mer-bas.svg" />
+
+      <img id="fish" src="images/poissons.svg" />
+
+      <svg
+        id="motionPath"
+        width="100%"
+        height="400"
+        preserveAspectRatio="xMinYMin"
+        viewBox="0 0 400 200"
+      >
+        <path
+          stroke="black"
+          fill="none"
+          d="M14.548,95.061 C34.54705,105.0594 74.498,20.945 94.107,26.899 121.86725,35.313 109.557,142.047 134.971,154.398 157.8337,165.507 202.154,30.686 229.243,31.616 263.9964,32.80235 298.481,120.158 329.6,159.508 344.8754,178.8202 358.969,50.015 373.587,51.368 375.5356,51.5456 422.3,136.523 441.973,141.708 461.64125,146.88075 502.842,52.97 528.232,53.077 558.698,53.1966 575.582,141.638 600.356,157.143 637.511,180.393 676.718,56.393 680.583,58.332 "
+        />
+      </svg>
+
+      <img id="medusa" src="images/meduse-1.svg" />
+
+      <img id="bottom-border" src="images/bord-bas.svg" />
+      <img id="left-border" src="images/bord-gauche.svg" />
+      <img id="right-border" src="images/bord-droit.svg" />
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
