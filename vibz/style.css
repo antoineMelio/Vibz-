@@ -1,4 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+:after {
+  box-sizing: border-box;
+}
 body {
+  padding: 0;
   margin: 0;
-  overflow-x: hidden;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 20px;
+}
+/*
+header img {
+  height: 15px;
+  margin-top: 25px;
+  margin-left: 150px;
+}
+
+header ul {
+  list-style-type: none;
+}
+header li {
+  display: inline;
+}
+
+header a {
+  text-decoration: none;
+}
+
+.backgroundvideo {
+  height: 650px;
+  background-image: url(images/backgroundintro.png);
+  background-size: cover;
+  background-position: center;
+} */
+
+#artistes {
+  background-image: url(images/white_pink_split_background.png);
+  padding: 5px;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: "Futura";
+}
+h2 {
+  text-align: center;
+  font-size: xx-large;
+  padding-top: 0px;
+  font-family: "Futura";
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.row > [class^="col-"] {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+}
+.col-4 {
+  width: 33.333%;
+}
+
+.col-4 img {
+  border-radius: 100%;
+  height: 50%;
+}
+.col-4 p {
+  text-align: center;
+}
+
+.row img {
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  display: flex;
+}
+
+#introprice {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.monthly {
+  display: block;
+  flex-direction: column;
+  max-width: 300px;
+  background-color: rgb(185, 185, 185);
+  padding-left: 25px;
+  padding-bottom: 25px;
+  padding-right: 25px;
+  margin-top: 40px;
+  border-radius: 3%;
+}
+
+.annual {
+  display: block;
+  flex-direction: column;
+  max-width: 300px;
+  /* padding-left: 25px;
+  padding-bottom: 25px;
+  padding-right: 25px; */
+  background-color: rgb(228, 179, 183);
+  border-radius: 3%;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#best {
+  padding: 1px;
+  background-color: rgb(212, 152, 157);
+  text-align: center;
+  color: white;
+  border-radius: 10% 10% 0% 0%;
+}
+
+.blockyear {
+  padding-left: 25px;
+  padding-bottom: 25px;
+  padding-right: 25px;
+}
+
+.blockyear button {
+  background-color: black;
+  color: white;
+}
+
+.plan button {
+  padding: 10px 45px;
+  text-align: center;
+  border: 0;
+}
+
+#pricemonthly {
+  font-size: xx-large;
+}
+
+#priceannual {
+  font-size: xx-large;
+}
+
+.white {
+  height: 100vh;
 }
