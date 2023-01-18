@@ -13,36 +13,16 @@ body {
   font-family: "Nunito", sans-serif;
   margin-bottom: 20px;
 }
-/*
-header img {
-  height: 15px;
-  margin-top: 25px;
-  margin-left: 150px;
-}
 
-header ul {
-  list-style-type: none;
-}
-header li {
-  display: inline;
-}
-
-header a {
-  text-decoration: none;
-}
-
-.backgroundvideo {
-  height: 650px;
-  background-image: url(images/backgroundintro.png);
-  background-size: cover;
-  background-position: center;
-} */
+/* background de la section artiste */
 
 #artistes {
   background-image: url(images/white_pink_split_background.png);
   padding: 5px;
   overflow: hidden;
 }
+
+/* les titres */
 
 h1 {
   font-family: "Futura";
@@ -53,6 +33,8 @@ h2 {
   padding-top: 0px;
   font-family: "Futura";
 }
+
+/* la grid des artistes */
 
 .row {
   display: flex;
@@ -87,6 +69,8 @@ h2 {
   display: flex;
 }
 
+/* section price + grid en rapport avec celle ci */
+
 #introprice {
   text-align: center;
   margin-bottom: 50px;
@@ -108,9 +92,6 @@ h2 {
   display: block;
   flex-direction: column;
   max-width: 300px;
-  /* padding-left: 25px;
-  padding-bottom: 25px;
-  padding-right: 25px; */
   background-color: rgb(228, 179, 183);
   border-radius: 3%;
 }
@@ -154,6 +135,8 @@ h2 {
 #priceannual {
   font-size: xx-large;
 }
+
+/* div white pour creer de l'espace blanc */
 
 .white {
   height: 100vh;
