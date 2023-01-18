@@ -4,7 +4,7 @@ gsap.to("#artistes", {
   scrollTrigger: {
     trigger: "#artistes",
     start: "top top",
-    end: "bottom 70%",
+    end: "bottom top",
     pin: true,
   },
 });
@@ -15,7 +15,7 @@ const portraitsTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: "#artistes",
     start: "top top",
-    end: "bottom 80%",
+    end: "bottom 70%",
     scrub: 1,
   },
 });
@@ -128,6 +128,147 @@ portraitsTimeline.fromTo(
   }
 );
 
+const retourPortraitTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#trigger",
+    start: "top top",
+    end: "bottom 20%",
+    scrub: 1,
+    markers: true,
+  },
+});
+
+retourPortraitTimeline.to(
+  "#dancer1",
+  {
+    x: 238,
+    y: 200,
+  },
+  0
+);
+
+retourPortraitTimeline.to(
+  "#dancer1 p",
+  {
+    opacity: 0,
+  },
+  0
+);
+
+retourPortraitTimeline.to(
+  "#dancer2",
+  {
+    y: 200,
+  },
+  1
+);
+
+retourPortraitTimeline.to(
+  "#dancer2 p",
+  {
+    opacity: 0,
+  },
+  1
+);
+
+retourPortraitTimeline.to(
+  "#dancer3",
+  {
+    x: -238,
+    y: 200,
+  },
+  2
+);
+
+retourPortraitTimeline.to(
+  "#dancer3 p",
+  {
+    opacity: 0,
+  },
+  2
+);
+
+retourPortraitTimeline.to(
+  "#dancer5",
+  {
+    x: -238,
+  },
+  3
+);
+
+retourPortraitTimeline.to(
+  "#dancer5 p",
+  {
+    opacity: 0,
+  },
+  3
+);
+
+retourPortraitTimeline.to(
+  "#dancer8",
+  {
+    x: -238,
+    y: -200,
+  },
+  4
+);
+
+retourPortraitTimeline.to(
+  "#dancer8 p",
+  {
+    opacity: 0,
+  },
+  4
+);
+
+retourPortraitTimeline.to(
+  "#dancer7",
+  {
+    y: -200,
+  },
+  5
+);
+
+retourPortraitTimeline.to(
+  "#dancer7 p",
+  {
+    opacity: 0,
+  },
+  5
+);
+
+retourPortraitTimeline.to(
+  "#dancer6",
+  {
+    x: 238,
+    y: -200,
+  },
+  6
+);
+
+retourPortraitTimeline.to(
+  "#dancer6 p",
+  {
+    opacity: 0,
+  },
+  6
+);
+
+retourPortraitTimeline.to(
+  "#dancer4",
+  {
+    x: 238,
+  },
+  7
+);
+
+retourPortraitTimeline.to(
+  "#dancer4 p",
+  {
+    opacity: 0,
+  },
+  7
+);
 // pin le background de la section price
 
 gsap.to("#price", {
@@ -147,6 +288,7 @@ const priceTimeline = gsap.timeline({
     start: "top top",
     end: "bottom 80%",
     scrub: 1,
+    //markers: true,
   },
 });
 

@@ -141,3 +141,7 @@ h2 {
 .white {
   height: 100vh;
 }
+
+#final {
+  z-index: 3;
+}
