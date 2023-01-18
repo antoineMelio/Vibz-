@@ -59,18 +59,6 @@ portraitsTimeline.fromTo(
 );
 
 portraitsTimeline.fromTo(
-  "#dancer4",
-  {
-    x: -600,
-    y: 0,
-  },
-  {
-    x: 0,
-    y: 0,
-  }
-);
-
-portraitsTimeline.fromTo(
   "#dancer5",
   {
     x: 600,
@@ -83,9 +71,9 @@ portraitsTimeline.fromTo(
 );
 
 portraitsTimeline.fromTo(
-  "#dancer6",
+  "#dancer8",
   {
-    x: -600,
+    x: 600,
     y: 600,
   },
   {
@@ -107,10 +95,22 @@ portraitsTimeline.fromTo(
 );
 
 portraitsTimeline.fromTo(
-  "#dancer8",
+  "#dancer6",
   {
-    x: 600,
+    x: -600,
     y: 600,
+  },
+  {
+    x: 0,
+    y: 0,
+  }
+);
+
+portraitsTimeline.fromTo(
+  "#dancer4",
+  {
+    x: -600,
+    y: 0,
   },
   {
     x: 0,
