@@ -144,7 +144,7 @@ const retourPortraitTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: "#trigger",
     start: "top top",
-    end: "bottom 20%",
+    end: "bottom top",
     scrub: 1,
   },
 });
