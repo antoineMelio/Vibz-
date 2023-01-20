@@ -1,4 +1,4 @@
-// pin le background de la section artiste
+// pin the background of artistes section
 
 gsap.to("#artistes", {
   scrollTrigger: {
@@ -9,18 +9,28 @@ gsap.to("#artistes", {
   },
 });
 
-// creation de la timeline des portraits
+// create the timeline for coming portrait
 
 const portraitsTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: "#artistes",
     start: "top top",
-    end: "bottom 70%",
+    end: "bottom 50%",
     scrub: 1,
   },
 });
 
-//FromTo pour chaque animation de la timeline
+//FromTo for each animations of the timeline
+
+portraitsTimeline.fromTo(
+  "#bestArtistes",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+  }
+);
 
 portraitsTimeline.fromTo(
   "#dancer1",
@@ -128,13 +138,14 @@ portraitsTimeline.fromTo(
   }
 );
 
+// portrait back section
+
 const retourPortraitTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: "#trigger",
     start: "top top",
     end: "bottom 20%",
     scrub: 1,
-    markers: true,
   },
 });
 
@@ -269,7 +280,107 @@ retourPortraitTimeline.to(
   },
   7
 );
-// pin le background de la section price
+
+// explosion portrait exit
+
+const explosionPortraitTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#artistes",
+    start: "bottom 90%",
+    end: "bottom 80%",
+    scrub: 1,
+  },
+});
+
+explosionPortraitTimeline.to(
+  "#dancer1",
+  {
+    x: -162,
+    y: -100,
+  },
+  0
+);
+
+explosionPortraitTimeline.to(
+  "#dancer2",
+  {
+    x: -300,
+    y: -100,
+  },
+  0
+);
+
+explosionPortraitTimeline.to(
+  "#dancer3",
+  {
+    x: -438,
+    y: -100,
+  },
+  0
+);
+
+explosionPortraitTimeline.to(
+  "#dancer4",
+  {
+    x: 138,
+    y: -300,
+  },
+  0
+);
+
+explosionPortraitTimeline.to(
+  "#final",
+  {
+    y: -300,
+  },
+  0
+);
+
+explosionPortraitTimeline.to(
+  "#final p",
+  {
+    opacity: 0,
+  },
+  0
+);
+
+explosionPortraitTimeline.to(
+  "#dancer5",
+  {
+    x: -138,
+    y: -300,
+  },
+  0
+);
+
+explosionPortraitTimeline.to(
+  "#dancer6",
+  {
+    x: 438,
+    y: -500,
+  },
+  0
+);
+
+explosionPortraitTimeline.to(
+  "#dancer7",
+  {
+    x: 300,
+    y: -500,
+  },
+  0
+);
+
+explosionPortraitTimeline.to(
+  "#dancer8",
+  {
+    x: 162,
+    y: -500,
+  },
+  0
+);
+
+// pin of the background price section
 
 gsap.to("#price", {
   scrollTrigger: {
@@ -280,7 +391,7 @@ gsap.to("#price", {
   },
 });
 
-// timeline des deplacements des blocks de prix
+// timeline of mouvement price block monthly/annual
 
 const priceTimeline = gsap.timeline({
   scrollTrigger: {
@@ -288,28 +399,68 @@ const priceTimeline = gsap.timeline({
     start: "top top",
     end: "bottom 80%",
     scrub: 1,
-    //markers: true,
   },
 });
 
-// mouvement to des blocks
+// movement to of block
 
-priceTimeline.to(
-  "#annual",
+priceTimeline.fromTo(
+  "#choicePlan",
   {
-    x: 300,
-    y: 54,
+    x: -1200,
+  },
+  {
+    x: 0,
+    y: 0,
+  },
+  0
+);
+
+priceTimeline.fromTo(
+  "#introPrice",
+  {
+    x: 1200,
+  },
+  {
+    x: 0,
+    y: 0,
   },
   0
 );
 
 priceTimeline.to(
-  "#monthly",
+  ".blockVideo",
   {
-    x: -300,
-    y: -274,
+    opacity: 0,
   },
   0
+);
+
+priceTimeline.to(
+  "#annual",
+  {
+    x: 400,
+    y: 54,
+  },
+  1
+);
+
+priceTimeline.to(
+  "#monthly",
+  {
+    x: -400,
+    y: -274,
+  },
+  1
+);
+
+priceTimeline.to(
+  ".blockVideo",
+  {
+    opacity: 1,
+    y: -548,
+  },
+  1
 );
 
 priceTimeline.to(
@@ -318,7 +469,7 @@ priceTimeline.to(
     x: 0,
     y: 274,
   },
-  1
+  2
 );
 
 priceTimeline.to(
@@ -327,5 +478,126 @@ priceTimeline.to(
     x: 0,
     y: -404,
   },
-  1
+  2
 );
+
+priceTimeline.to(
+  ".blockVideo",
+  {
+    opacity: 0,
+  },
+  2
+);
+
+// function onStart for timer shadow
+
+const timerTimeline = gsap.timeline({});
+
+function onVideoStart() {
+  timerTimeline.to(
+    "#shadow1",
+    {
+      duration: 2.5,
+      opacity: 1,
+    },
+    0
+  );
+
+  timerTimeline.to(
+    "#shadow2",
+    {
+      duration: 2.5,
+      opacity: 1,
+    },
+    2.5
+  );
+
+  timerTimeline.to(
+    "#shadow1",
+    {
+      duration: 2.5,
+      opacity: 0,
+    },
+    2.5
+  );
+
+  timerTimeline.to(
+    "#shadow3",
+    {
+      duration: 2.5,
+      opacity: 1,
+    },
+    5
+  );
+
+  timerTimeline.to(
+    "#shadow2",
+    {
+      duration: 2.5,
+      opacity: 0,
+    },
+    5
+  );
+
+  timerTimeline.to(
+    "#shadow4",
+    {
+      duration: 2.5,
+      opacity: 1,
+    },
+    7.5
+  );
+
+  timerTimeline.to(
+    "#shadow3",
+    {
+      duration: 2.5,
+      opacity: 0,
+    },
+    7.5
+  );
+
+  timerTimeline.to(
+    "#shadow5",
+    {
+      duration: 2.5,
+      opacity: 1,
+    },
+    10
+  );
+
+  timerTimeline.to(
+    "#shadow4",
+    {
+      duration: 2.5,
+      opacity: 0,
+    },
+    10
+  );
+
+  timerTimeline.to(
+    "#shadow6",
+    {
+      duration: 2.5,
+      opacity: 1,
+    },
+    12.5
+  );
+
+  timerTimeline.to(
+    "#shadow5",
+    {
+      duration: 2.5,
+      opacity: 0,
+    },
+    12.5
+  );
+  timerTimeline.to(
+    "#shadow6",
+    {
+      duration: 2.5,
+      opacity: 0,
+    },
+    15
+  );
+}

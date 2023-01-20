@@ -2,11 +2,6 @@
   box-sizing: border-box;
 }
 
-*,
-*:before,
-:after {
-  box-sizing: border-box;
-}
 body {
   padding: 0;
   margin: 0;
@@ -14,7 +9,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* background de la section artiste */
+/* background artistes section */
 
 #artistes {
   background-image: url(images/white_pink_split_background.png);
@@ -22,7 +17,7 @@ body {
   overflow: hidden;
 }
 
-/* les titres */
+/* title */
 
 h1 {
   font-family: "Futura";
@@ -34,7 +29,7 @@ h2 {
   font-family: "Futura";
 }
 
-/* la grid des artistes */
+/* artistes grid */
 
 .row {
   display: flex;
@@ -69,9 +64,9 @@ h2 {
   display: flex;
 }
 
-/* section price + grid en rapport avec celle ci */
+/* section price + grid price */
 
-#introprice {
+#introPrice {
   text-align: center;
   margin-bottom: 50px;
 }
@@ -85,7 +80,7 @@ h2 {
   padding-bottom: 25px;
   padding-right: 25px;
   margin-top: 40px;
-  border-radius: 3%;
+  border-radius: 10px;
 }
 
 .annual {
@@ -93,7 +88,8 @@ h2 {
   flex-direction: column;
   max-width: 300px;
   background-color: rgb(228, 179, 183);
-  border-radius: 3%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .plan {
@@ -108,16 +104,16 @@ h2 {
   background-color: rgb(212, 152, 157);
   text-align: center;
   color: white;
-  border-radius: 10% 10% 0% 0%;
+  overflow: hidden;
 }
 
-.blockyear {
+.blockYear {
   padding-left: 25px;
   padding-bottom: 25px;
   padding-right: 25px;
 }
 
-.blockyear button {
+.blockYear button {
   background-color: black;
   color: white;
 }
@@ -128,15 +124,15 @@ h2 {
   border: 0;
 }
 
-#pricemonthly {
+#priceMonthly {
   font-size: xx-large;
 }
 
-#priceannual {
+#priceAnnual {
   font-size: xx-large;
 }
 
-/* div white pour creer de l'espace blanc */
+/* div white to create space for scrolling */
 
 .white {
   height: 100vh;
@@ -144,4 +140,33 @@ h2 {
 
 #final {
   z-index: 3;
+}
+
+/* block video + grid of shadow */
+
+#video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blockVideo {
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.shadow img {
+  height: 100px;
+
+  opacity: 0;
+}
+
+#shadow1 {
+  height: 120px;
+}
+#shadow5 {
+  height: 90px;
 }

@@ -3,28 +3,28 @@
   <head>
     <meta charset="utf-8" />
 
-    <!-- utile pour le responsive -->
+    <!-- responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- titre de la page -->
+    <!-- page title -->
     <title>Vibz</title>
 
-    <!-- lien vers le fichier de style CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <!-- link for css and fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- bloc white pour creer de l'espace blanc pour scroll -->
-    <div class="white"></div>
-    <!-- section des artistes -->
+    <!-- white bloc for creating space while scrolling -->
+    <div id="videoTrigger" class="white"></div>
+    <!-- artistes section -->
     <section id="artistes">
-      <h2>Encadré par les meilleurs</h2>
-      <!-- grid des artistes -->
+      <h2 id="bestArtistes">Encadré par les meilleurs</h2>
+      <!-- artistes grid -->
       <div class="row">
         <div id="dancer1" class="col-4">
           <img
@@ -104,41 +104,65 @@
         </div>
       </div>
     </section>
-    <!-- section des tarifs -->
+    <!-- tarifs section -->
     <section id="price">
-      <h2>Choisis ton plan</h2>
-      <p id="introprice">
+      <h2 id="choicePlan">Choisis ton plan</h2>
+      <p id="introPrice">
         Inscrivez-vous à un plan Premium pour obtenir un accès illimité à 150+
         cours et l’integralité de nos chorégraphes.
       </p>
-      <!-- grid des prix -->
+      <!-- price grid -->
       <div class="plan">
-        <!-- tarif annuel -->
+        <!-- annual tarif -->
         <div id="annual" class="annual">
-          <!-- block de la meilleur offre -->
+          <!-- block best offer -->
           <div id="best">
             <p>Meilleur offre ( -32% )</p>
           </div>
-          <!-- block du prix annuel -->
-          <div class="blockyear">
+          <!-- block annual price -->
+          <div class="blockYear">
             <h3>Plan Annuel</h3>
-            <p id="pricemonthly">6.75Є /mois</p>
-            <p>paiement de 6.75Є par mois</p>
+            <p id="priceMonthly">6.75Є /mois</p>
+            <p>paiement de 80.90Є par an</p>
             <button>Commencer avec 7 jours gratuits</button>
           </div>
         </div>
-        <!-- block du prix mensuel -->
+        <!-- block monthly price -->
         <div id="monthly" class="monthly">
           <h3>Plan Mensuel</h3>
-          <p id="priceannual">9.90Є /mois</p>
-          <p>paiement de 80.90Є par an</p>
+          <p id="priceAnnual">9.90Є /mois</p>
+          <p>paiement de 9.90Є par mois</p>
           <button>Commencer avec 7 jours gratuits</button>
+        </div>
+
+        <!-- div of block video -->
+        <div id="video" class="blockVideo">
+          <video
+            id="video"
+            height="240"
+            onplay="onVideoStart()"
+            controls
+            autoplay
+            preload="auto"
+          >
+            <source src="images/test.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <!-- div of shadow -->
+          <div class="shadow">
+            <img id="shadow1" src="images/ombre1.png" />
+            <img id="shadow2" src="images/ombre2.png" />
+            <img id="shadow3" src="images/ombre3.png" />
+            <img id="shadow4" src="images/ombre4.png" />
+            <img id="shadow5" src="images/ombre5.png" />
+            <img id="shadow6" src="images/ombre6.png" />
+          </div>
         </div>
       </div>
     </section>
-    <!-- bloc white pour creer de l'espace blanc pour scroll -->
+    <!-- white bloc for creating space while scrolling -->
     <div class="white"></div>
-    <!-- plugins + le script -->
+    <!-- plugins and script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
